@@ -12,7 +12,7 @@ void init_ps(ps_t *ps, va_list ptr)
 	ps->space_flg = 0;
 	ps->hashtag_flg = 0;
 	ps->zero_flg = 0;
-	ps->minus_flg = 0 ;
+	ps->minus_flg = 0;
 	ps->width = 0;
 	ps->precision = UINT_MAX;
 	ps->h_modifier = 0;
