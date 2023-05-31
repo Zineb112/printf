@@ -99,6 +99,36 @@ int print_num_rights(char *str, ps_t *ps)
 	return (a);
 }
 
+/**
+ * print_num_lefts - gives a number.
+ * @str: string.
+ * @ps: struct parameters.
+ * Return: char.
+ */
+
+int print_num_lefts(char *str, ps_t *ps)
+{
+	unsigned int a = 0, N1, N2, b = _strlen(str);
+	char char_p = ' ';
+
+	if (ps->zero_flg && !ps->minus_flg)
+		char_p = '0';
+	N = N2 = (!ps->unsign && *str == '-');
+	if (N && b < ps->width && char_p == '0' && !ps->minus_flg)
+		str++;
+	else
+		N1 = 0;
+
+	if (ps->plus_flg && !N2 && !ps->unsign)
+		a += _putchar ('+'), b++;
+	else if (ps->space_flg && !N2 && !ps->unsign)
+		a += _putchar(' '), b++;
+	a += _puts(str);
+	while (b++ < ps->width)
+		a += _putchar(char_p);
+	return (a);
+}
+
 
 
 
