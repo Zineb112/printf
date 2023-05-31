@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 			p++;
 		if (!get_specifier(p))
 		{
-			result += print_form_to(start, p,
+			result += print_from_to(start, p,
 			ps.l_modifier || ps.h_modifier ? p - 1 : 0);
 		}
 		else
